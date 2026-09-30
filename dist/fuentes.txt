@@ -117,6 +117,7 @@ https://www.ipsos.com/en-uk/generation-ipsos
 https://www.lifeatspotify.com/find-your-team/job-categories/data-research-insights
 https://www.linkedin.com/posts/swedish-institute-for-social-research-sofi_research-assistant-pre-doc-activity-7464613691234115584-4C-Z
 https://www.lse.ac.uk/economics/people/predocs
+https://www.lse.ac.uk/study-at-lse/graduate/mphilphd-computational-social-science
 https://www.metacareers.com/teams/technology?tab=AI
 https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/internships/
 https://www.microsoft.com/en-us/research/theme/economics-and-computation/predoctoral-researchers/
@@ -130,6 +131,7 @@ https://www.oecd.org/en/about/careers/young-associates.html
 https://www.oii.ox.ac.uk/
 https://www.oii.ox.ac.uk/people/profiles/paul-povel/
 https://www.oii.ox.ac.uk/people/vacancies/
+https://www.ox.ac.uk/admissions/graduate/courses/dphil-social-data-science
 https://www.povertyactionlab.org/j-pal-africa-working-j-pal-africa
 https://www.povertyactionlab.org/page/careers-faq
 https://www.povertyactionlab.org/page/recruitment-timeline

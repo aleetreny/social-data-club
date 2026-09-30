@@ -4,7 +4,7 @@ Un atlas estático en español para orientarse entre instituciones, programas re
 
 **Web:** https://aleetreny.github.io/social-data-club/
 
-La edición del 30 de septiembre de 2026 contiene **112 instituciones, 142 rutas y 161 referencias enlazadas**. Se distinguen 97 programas documentados, 44 canales de contratación por equipos y un destino de otro programa. EEA participa mediante Blue Book: sus dos fichas no representan dos mecanismos independientes de acceso.
+La edición del 30 de septiembre de 2026 contiene **112 instituciones, 142 rutas y 163 referencias enlazadas**. Se distinguen 97 programas documentados, 44 canales de contratación por equipos y un destino de otro programa. EEA participa mediante Blue Book: sus dos fichas no representan dos mecanismos independientes de acceso.
 
 ## Qué puedes hacer
 

@@ -482,11 +482,12 @@ dict(name='EEA · experiencia de trainees',type='Testimonios seleccionados por l
 dict(name='Eurofound · Social Policies trainee',type='Experiencia publicada por la institución',date='Página consultada 30/09/2026',up='La agencia ofrece un relato del trabajo en investigación de política social.',down='Una experiencia ilustrativa no revela distribución de satisfacción ni calidad de todos los equipos.',limit='Fuente promocional; sirve para explorar tareas y contexto, no para construir un ranking de experiencia laboral.',url='https://www.eurofound.europa.eu/en/pages/vacancies/information-on-traineeships')]
 
 themes=dict(ia='IA & trabajo',causalidad='Política & causalidad',desigualdad='Desigualdad',plataformas='Plataformas & redes',metodos='Métodos & encuestas',clima='Clima & territorio',salud='Salud & población',macro='Macro & finanzas')
-data=dict(title='Social Data Club',reviewed='2026-09-30',institutions=institutions,programs=programs,groups=groups,themes=themes,voices=voices)
+targets=[dict(name='Oxford · DPhil Social Data Science',url='https://www.ox.ac.uk/admissions/graduate/courses/dphil-social-data-science'),dict(name='LSE · MPhil/PhD Computational Social Science',url='https://www.lse.ac.uk/study-at-lse/graduate/mphilphd-computational-social-science')]
+data=dict(title='Social Data Club',reviewed='2026-09-30',institutions=institutions,programs=programs,groups=groups,themes=themes,voices=voices,targets=targets)
 out=ROOT/'dist'; out.mkdir(exist_ok=True)
 (ROOT/'data').mkdir(exist_ok=True)
 (ROOT/'data/catalogue.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 (out/'catalogue.js').write_text('window.ATLAS = '+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n')
-urls=sorted(set([i['url'] for i in institutions]+[i['portal'] for i in institutions if i.get('portal')]+[p['url'] for p in programs]+[v['url'] for v in voices]))
+urls=sorted(set([i['url'] for i in institutions]+[i['portal'] for i in institutions if i.get('portal')]+[p['url'] for p in programs]+[v['url'] for v in voices]+[t['url'] for t in targets]))
 (out/'fuentes.txt').write_text('SOCIAL DATA CLUB · fuentes enlazadas · corte 30/09/2026\nResumen editorial original; los documentos de terceros conservan sus derechos.\nNo implica lectura íntegra de cada documento ni disponibilidad de plazas.\n\n'+'\n'.join(urls)+'\n')
 print(f'{len(institutions)} instituciones · {len(programs)} rutas · {sum(p["kind"]=="programa" for p in programs)} programas · {len(urls)} fuentes enlazadas')

@@ -5085,5 +5085,15 @@
       "limit": "Fuente promocional; sirve para explorar tareas y contexto, no para construir un ranking de experiencia laboral.",
       "url": "https://www.eurofound.europa.eu/en/pages/vacancies/information-on-traineeships"
     }
+  ],
+  "targets": [
+    {
+      "name": "Oxford · DPhil Social Data Science",
+      "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-social-data-science"
+    },
+    {
+      "name": "LSE · MPhil/PhD Computational Social Science",
+      "url": "https://www.lse.ac.uk/study-at-lse/graduate/mphilphd-computational-social-science"
+    }
   ]
 }

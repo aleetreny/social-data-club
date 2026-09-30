@@ -3,7 +3,7 @@ import json, re, concurrent.futures, urllib.request, urllib.error, datetime
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'data/catalogue.json').read_text())
-urls=sorted({x[field] for key in ['institutions','programs','voices'] for x in data[key] for field in ['url','portal'] if x.get(field)})
+urls=sorted({x[field] for key in ['institutions','programs','voices','targets'] for x in data[key] for field in ['url','portal'] if x.get(field)})
 def check(url):
     try:
         with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'SocialDataClub-source-review/1.0'}),timeout=18) as res:
