@@ -1,0 +1,49 @@
+name: Publish static atlas
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Build and validate static catalogue
+        run: |
+          python3 scripts/build_catalogue.py
+          python3 scripts/validate.py
+          node --check dist/app.js
+          node --check dist/catalogue.js
+      - name: Record deployed commit
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          Path('dist/build-info.json').write_text(json.dumps({
+              'commit': os.environ['GITHUB_SHA'],
+              'built_at': datetime.now(timezone.utc).isoformat(),
+              'edition': '2026-09-30',
+          }) + '\n')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
